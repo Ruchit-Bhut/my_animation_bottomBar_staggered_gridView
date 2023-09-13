@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:my_animation/animated_notch_bottom_bar.dart';
+import 'package:my_animation/hexagon.dart';
 import 'package:my_animation/my_animation_page.dart';
 import 'package:my_animation/my_bottom_bar.dart';
 import 'package:my_animation/my_staggered_grid_view.dart';
@@ -117,6 +118,27 @@ class _HomePageState extends State<HomePage> {
                       },
                       child: const Text(
                         'My Staggered GridView',
+                        style: TextStyle(
+                          fontSize: 20,
+                        ),
+                      ),
+                    ),
+                    ElevatedButton(
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.black45,
+                        elevation: 0,
+                      ),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (BuildContext context) =>
+                            const Hexagon(),
+                          ),
+                        );
+                      },
+                      child: const Text(
+                        'Hexagon',
                         style: TextStyle(
                           fontSize: 20,
                         ),
